@@ -1,5 +1,7 @@
-# Style_Synergy_HTML
+# Style_Synergy
 "A platform connecting skilled fashion designers/stylists with Gen-Z individuals seeking trendy and personalized styling solutions."
+
+# Style_Synergy_HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
