@@ -1,7 +1,231 @@
 # Style_Synergy
 "A platform connecting skilled fashion designers/stylists with Gen-Z individuals seeking trendy and personalized styling solutions."
+# Style_Synergy_HTML code for main page 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Synergy</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">Style Synergy</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#marketplace">Marketplace</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="file:///C:/Users/shivani%20patwa/Downloads/web%20development/Quiz1/login_registration/index1.html" class="login-button">Login</a></li>
+            </ul>
+        </nav>
+    </header>
 
-# Style_Synergy_HTML
+    <section id="home">
+        <div class="welcome">
+            <h2>Welcome to Style Synergy</h2>
+            <h3>What is Style Synergy?</h3>
+            <p>"Your go-to platform for the latest fashion trends. 
+                Style Synergy is a interface designed to bring two individuals is need: Skilled fashion designer/stylist and the Gen-Z generation, who often struggle to style themselves according to current trends."</p>
+        </div>
+        <div class="how-it-works">
+            <h2>How It Works</h2>
+            <p>Get started in simple steps...</p>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Our mission is to connect Gen-Z with skilled fashion designers.</p>
+        <div class="team">
+            <h3>Meet the Team</h3>
+            <p>Introduction to our team.</p>
+        </div>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="designer-connections">
+            <h3>Designers Connections</h3>
+            <p>Skilled designers to help you with style preferences.</p>
+        </div>
+        <div class="client-engagement">
+            <h3>Client Engagement</h3>
+            <p>Platform for designers to connect with potential clients.</p>
+        </div>
+    </section>
+
+    <section id="marketplace">
+        <h2>Marketplace</h2>
+        <div class="products">
+            <h3>Products</h3>
+            <p>Brands and products available in our store.</p>
+        </div>
+        <div class="portfolios">
+            <h3>Designers Portfolios</h3>
+            <p>Showcase of designers' work.</p>
+        </div>
+        <div class="reviews">
+            <h3>Customer Reviews</h3>
+            <p>Feedback from our users.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form action="">
+            <div class="wrapper" id="login-form">
+            <h1>Query Box</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Your Name" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="email" placeholder="Your Email" required>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="Your Query" required>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+            <button type="submit" class="btn">Submit</button>
+            </div>
+        </div>
+        </form>
+
+        <div class="social-media">
+            <h3>Follow Us</h3>
+            <p>Links to our social media channels.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Style Synergy. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+
+# Style_Synergy_CSS code for main page 
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFE6E6;
+    color: #100f0f;
+    background-image: url('download\ \(2\).png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+header {
+    background-color: rgba(255, 20, 147, 0.5);
+    color: #0c0c0c;
+    padding: 20px 0;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+}
+
+.logo {
+    font-size: 48px; 
+    font-weight: bold;
+    font-family: 'Pacifico', cursive; 
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #FFE6E6;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+section {
+    padding: 20px;
+    margin: 10px 0;
+    font-family: 'Open Sans', sans-serif;
+    background: rgba(255, 230, 230, 0.5);
+    border-radius: 5px;
+    font-size: 20px; 
+}
+
+#welcome, .how-it-works {
+    background: rgba(255, 182, 193, 0.5); 
+    padding: 20px;
+    border-radius: 5px;
+}
+
+h2 {
+    color: #0e0d0d;
+    font-family: 'Lobster', cursive;
+    font-size: 36px;
+}
+
+button {
+    background-color: rgba(255, 20, 147, 0.5);
+    color: #FFE6E6;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px; 
+}
+
+button:hover {
+    background-color: rgba(255, 105, 180, 0.5); 
+}
+
+footer {
+    background-color: rgba(255, 20, 147, 0.5);
+    color: #FFE6E6;
+    text-align: center;
+    padding: 10px 0;
+    position: -ms-page;
+    width: 100%;
+    bottom: 0;
+    font-size: 20px; /
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid rgba(255, 20, 147, 0.5);
+    border-radius: 5px;
+    background: rgba(255, 230, 230, 0.5);
+    font-size: 18px;
+}
+
+form textarea {
+    height: 100px;
+}
+
+form button {
+    display: block;
+    width: 100%;
+    font-size: 20px;
+}
+
+
+# When the user will click on the login icon it will take you to the login and registration page 
+
+# Style_Synergy_HTML code for login page 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -86,7 +310,7 @@
 </html>
 
 
-# Style_Synergy_CSS
+# Style_Synergy_CSS code for login page
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
 * {
