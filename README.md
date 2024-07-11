@@ -12,9 +12,8 @@
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
-
 <body>
-    <div class="wrapper">
+    <div class="wrapper" id="login-form">
         <form action="">
             <h1>Login</h1>
             <div class="input-box">
@@ -31,12 +30,61 @@
             </div>
             <button type="submit" class="btn">Login</button>
             <div class="register-link">
-                <p>Don't have an account? <a href="#">Register</a></p>
+                <p>Don't have an account? <a href="#" id="register-link">Register</a></p>
             </div>
         </form>
     </div>
+
+    <div class="wrapper" id="register-form" style="display:none;">
+        <form action="">
+            <h1>Register</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Name" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="Phone Number" required>
+                <i class='bx bxs-phone'></i>
+            </div>
+            <div class="input-box">
+                <input type="email" placeholder="Email" required>
+                <i class='bx bxs-envelope'></i>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Password" required>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Confirm Password" required>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+            <div class="input-box">
+                <input type="number" placeholder="Age" required>
+                <i class='bx bxs-cake'></i>
+            </div>
+            <button type="submit" class="btn">Register</button>
+            <div class="register-link">
+                <p>Already have an account? <a href="#" id="login-link">Login</a></p>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('register-link').addEventListener('click', function (e) {
+            e.preventDefault();
+            document.getElementById('login-form').style.display = 'none';
+            document.getElementById('register-form').style.display = 'block';
+        });
+
+        document.getElementById('login-link').addEventListener('click', function (e) {
+            e.preventDefault();
+            document.getElementById('login-form').style.display = 'block';
+            document.getElementById('register-form').style.display = 'none';
+        });
+    </script>
 </body>
 </html>
+
 
 # Style_Synergy_CSS
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
@@ -156,3 +204,4 @@ body {
 .register-link p a:hover {
     text-decoration: underline;
 }
+
