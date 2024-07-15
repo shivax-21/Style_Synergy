@@ -346,9 +346,12 @@ app.listen(3000, () => {
 });
 
 
-# When the user will click on the login icon it will take you to the login and registration page 
 
 # Style_Synergy_HTML code for login page 
+
+# When the user will click on the login icon it will take you to the login and registration page   
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
