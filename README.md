@@ -240,6 +240,111 @@ img {
 }
 
 
+# Style_Synergy JS code for main page
+
+
+const express = require('express');
+const mongoose = require('mongoose');
+const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
+const multer = require('multer');
+const bodyParser = require('body-parser');
+
+const app = express();
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+mongoose.connect('mongodb://localhost:27017/stylist-platform', { useNewUrlParser: true, useUnifiedTopology: true });
+
+// Models
+const User = require('./models/User');
+const Post = require('./models/Post');
+
+// User registration
+app.post('/register', async (req, res) => {
+    const { username, email, password } = req.body;
+    const hashedPassword = await bcrypt.hash(password, 10);
+    const user = new User({ username, email, password: hashedPassword });
+    await user.save();
+    res.status(201).send('User registered');
+});
+
+// User login
+app.post('/login', async (req, res) => {
+    const { username, password } = req.body;
+    const user = await User.findOne({ username });
+    if (!user) return res.status(400).send('User not found');
+
+    const isMatch = await bcrypt.compare(password, user.password);
+    if (!isMatch) return res.status(400).send('Invalid password');
+
+    const token = jwt.sign({ id: user._id }, 'secret');
+    res.json({ token });
+});
+
+// Middleware to authenticate user
+const auth = (req, res, next) => {
+    const token = req.header('Authorization');
+    if (!token) return res.status(401).send('Access denied');
+
+    try {
+        const verified = jwt.verify(token, 'secret');
+        req.user = verified;
+        next();
+    } catch (err) {
+        res.status(400).send('Invalid token');
+    }
+};
+
+// Create a post
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, 'uploads/');
+    },
+    filename: (req, file, cb) => {
+        cb(null, Date.now() + '-' + file.originalname);
+    }
+});
+const upload = multer({ storage });
+
+app.post('/post', auth, upload.single('image'), async (req, res) => {
+    const { caption } = req.body;
+    const post = new Post({ caption, image: req.file.path, user: req.user.id });
+    await post.save();
+    res.status(201).send('Post created');
+});
+
+// Like a post
+app.post('/like/:id', auth, async (req, res) => {
+    const post = await Post.findById(req.params.id);
+    if (!post.likes.includes(req.user.id)) {
+        post.likes.push(req.user.id);
+        await post.save();
+        res.status(200).send('Post liked');
+    } else {
+        res.status(400).send('Already liked');
+    }
+});
+
+// Send connection request
+app.post('/connect/:id', auth, async (req, res) => {
+    const user = await User.findById(req.params.id);
+    if (!user.requests.includes(req.user.id)) {
+        user.requests.push(req.user.id);
+        await user.save();
+        res.status(200).send('Connection request sent');
+    } else {
+        res.status(400).send('Request already sent');
+    }
+});
+
+app.use(express.static('public'));
+
+app.listen(3000, () => {
+    console.log('Server running on http://localhost:3000');
+});
+
 
 # When the user will click on the login icon it will take you to the login and registration page 
 
