@@ -108,7 +108,6 @@
         <div class="social-media">
             <h3>Follow Us</h3>
             <p>Links to our social media channels.</p>
-            <img src="images/social-media.jpg" alt="Social Media">
         </div>
     </section>
 
