@@ -35,7 +35,7 @@
         <div class="how-it-works">
             <h2>How It Works</h2>
             <p>Get started in simple steps...</p>
-            <img src="Add a heading.png" alt="How It Works">
+            <img src="Add a heading (1).png" alt="How It Works">
         </div>
     </section>
 
@@ -116,7 +116,6 @@
     </footer>
 </body>
 </html>
-
 
 
 # Style_Synergy_CSS code for main page 
