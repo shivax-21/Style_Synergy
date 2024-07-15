@@ -30,11 +30,12 @@
             <h2>Welcome to Style Synergy</h2>
             <h3>What is Style Synergy?</h3>
             <p>"Your go-to platform for the latest fashion trends. 
-                Style Synergy is a interface designed to bring two individuals is need: Skilled fashion designer/stylist and the Gen-Z generation, who often struggle to style themselves according to current trends."</p>
+                Style Synergy is a interface designed to bring two individuals in need: Skilled fashion designer/stylist and the Gen-Z generation, who often struggle to style themselves according to current trends."</p>               
         </div>
         <div class="how-it-works">
             <h2>How It Works</h2>
             <p>Get started in simple steps...</p>
+            <img src="Add a heading.png" alt="How It Works">
         </div>
     </section>
 
@@ -44,11 +45,14 @@
         <div class="team">
             <h3>Meet the Team</h3>
             <p>Introduction to our team.</p>
+            <p>Shivani Patwa</p>
+            <p>Meenu Singh</p>
         </div>
     </section>
 
     <section id="services">
         <h2>Our Services</h2>
+        <img src="shoponline.png" alt="services">
         <div class="designer-connections">
             <h3>Designers Connections</h3>
             <p>Skilled designers to help you with style preferences.</p>
@@ -56,6 +60,7 @@
         <div class="client-engagement">
             <h3>Client Engagement</h3>
             <p>Platform for designers to connect with potential clients.</p>
+            <img src="download (3).png" alt="Client Engagement">
         </div>
     </section>
 
@@ -64,13 +69,16 @@
         <div class="products">
             <h3>Products</h3>
             <p>Brands and products available in our store.</p>
+            <img src="Designer.jpeg" alt="Products">
         </div>
         <div class="portfolios">
             <h3>Designers Portfolios</h3>
             <p>Showcase of designers' work.</p>
+            <img src="image0_0 (5).jpg" alt="Portfolios">
         </div>
         <div class="reviews">
-            <h3>Customer Reviews</h3>
+            <h2>How was your experience?</h2>
+            <h3>Customer Reviews:</h3>
             <p>Feedback from our users.</p>
         </div>
     </section>
@@ -100,6 +108,7 @@
         <div class="social-media">
             <h3>Follow Us</h3>
             <p>Links to our social media channels.</p>
+            <img src="images/social-media.jpg" alt="Social Media">
         </div>
     </section>
 
@@ -110,6 +119,7 @@
 </html>
 
 
+
 # Style_Synergy_CSS code for main page 
 body {
     font-family: 'Open Sans', sans-serif;
@@ -118,14 +128,14 @@ body {
     background-color: #FFE6E6;
     color: #100f0f;
     background-image: url('download\ \(2\).png');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    text-align: center;
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed; 
+    text-align: center; 
 }
 
 header {
-    background-color: rgba(255, 20, 147, 0.5);
+    background-color: rgba(255, 20, 147, 0.5); 
     color: #0c0c0c;
     padding: 20px 0;
     text-align: center;
@@ -153,14 +163,14 @@ nav ul li a {
     color: #FFE6E6;
     text-decoration: none;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 20px; 
 }
 
 section {
     padding: 20px;
     margin: 10px 0;
     font-family: 'Open Sans', sans-serif;
-    background: rgba(255, 230, 230, 0.5);
+    background: rgba(255, 230, 230, 0.5); 
     border-radius: 5px;
     font-size: 20px; 
 }
@@ -174,11 +184,11 @@ section {
 h2 {
     color: #0e0d0d;
     font-family: 'Lobster', cursive;
-    font-size: 36px;
+    font-size: 36px; 
 }
 
 button {
-    background-color: rgba(255, 20, 147, 0.5);
+    background-color: rgba(255, 20, 147, 0.5); 
     color: #FFE6E6;
     padding: 10px 20px;
     border: none;
@@ -192,24 +202,24 @@ button:hover {
 }
 
 footer {
-    background-color: rgba(255, 20, 147, 0.5);
+    background-color: rgba(255, 20, 147, 0.5); 
     color: #FFE6E6;
     text-align: center;
     padding: 10px 0;
     position: -ms-page;
     width: 100%;
     bottom: 0;
-    font-size: 20px; /
+    font-size: 20px; 
 }
 
 form input, form textarea {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
-    border: 1px solid rgba(255, 20, 147, 0.5);
+    border: 1px solid rgba(255, 20, 147, 0.5); 
     border-radius: 5px;
-    background: rgba(255, 230, 230, 0.5);
-    font-size: 18px;
+    background: rgba(255, 230, 230, 0.5); 
+    font-size: 18px; 
 }
 
 form textarea {
@@ -219,8 +229,16 @@ form textarea {
 form button {
     display: block;
     width: 100%;
-    font-size: 20px;
+    font-size: 20px; 
 }
+
+img {
+    width: 25%; 
+    height: auto;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
 
 
 # When the user will click on the login icon it will take you to the login and registration page 
